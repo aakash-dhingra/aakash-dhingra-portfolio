@@ -1,6 +1,6 @@
 'use client';
 
-import { motion, useScroll, useSpring } from "framer-motion";
+import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Hero from "@/components/Hero";
 import Timeline from "@/components/Timeline";
 import Skills from "@/components/Skills";
@@ -31,7 +31,7 @@ export default function Home() {
       <motion.div
         className="fixed right-4 top-1/2 -translate-y-1/2 z-50 text-space-accent hidden md:block"
         style={{
-          y: useSpring(scrollYProgress, { stiffness: 100, damping: 30 }).get() * 100
+          y: useTransform(useSpring(scrollYProgress, { stiffness: 100, damping: 30 }), (value: number) => value * 100)
         }}
       >
         <Rocket className="w-6 h-6 rotate-45" />
