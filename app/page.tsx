@@ -1,13 +1,16 @@
 'use client';
 
+import dynamic from 'next/dynamic';
 import { motion, useScroll, useSpring, useTransform } from "framer-motion";
 import Hero from "@/components/Hero";
-import Timeline from "@/components/Timeline";
-import Skills from "@/components/Skills";
-import Projects from "@/components/Projects";
-import Personal from "@/components/Personal";
-import Contact from "@/components/Contact";
 import { Rocket } from "lucide-react";
+
+// Lazy load heavy sections
+const Timeline = dynamic(() => import("@/components/Timeline"), { ssr: true });
+const Skills = dynamic(() => import("@/components/Skills"), { ssr: true });
+const Projects = dynamic(() => import("@/components/Projects"), { ssr: true });
+const Personal = dynamic(() => import("@/components/Personal"), { ssr: true });
+const Contact = dynamic(() => import("@/components/Contact"), { ssr: true });
 
 export default function Home() {
   const { scrollYProgress } = useScroll();

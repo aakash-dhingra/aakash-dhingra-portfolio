@@ -2,7 +2,7 @@
 
 import React, { useRef, useEffect } from 'react';
 
-export default function StarBackground() {
+function StarBackground() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -130,3 +130,5 @@ export default function StarBackground() {
     </div>
   );
 }
+
+export default React.memo(StarBackground);

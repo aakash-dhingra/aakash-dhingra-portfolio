@@ -14,7 +14,7 @@ interface PlanetProps {
     delay?: number;
 }
 
-export default function Planet({
+function Planet({
     size = 'md',
     color = 'bg-space-purple',
     label,
@@ -69,3 +69,5 @@ export default function Planet({
         </div>
     );
 }
+
+export default React.memo(Planet);

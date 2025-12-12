@@ -33,23 +33,53 @@
   --animate-cursor-blink: cursor-blink 1s step-end infinite;
 
   @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(-20px);
+    }
   }
 
   @keyframes twinkle {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.3; }
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0.3;
+    }
   }
 
   @keyframes pulse-glow {
-    0%, 100% { opacity: 0.6; box-shadow: 0 0 10px var(--space-glow); }
-    50% { opacity: 1; box-shadow: 0 0 20px var(--space-glow), 0 0 40px var(--space-accent); }
+
+    0%,
+    100% {
+      opacity: 0.6;
+      box-shadow: 0 0 10px var(--space-glow);
+    }
+
+    50% {
+      opacity: 1;
+      box-shadow: 0 0 20px var(--space-glow), 0 0 40px var(--space-accent);
+    }
   }
 
   @keyframes cursor-blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
+
+    0%,
+    100% {
+      opacity: 1;
+    }
+
+    50% {
+      opacity: 0;
+    }
   }
 }
 

@@ -104,8 +104,8 @@ export default function Timeline() {
                                     {/* Fly-in Summary - Positioned Relative to Planet */}
                                     <motion.div
                                         className={`absolute top-1/2 -translate-y-1/2 ${index % 2 === 0
-                                                ? 'right-full mr-6' // Content Right -> Summary Left of Planet
-                                                : 'left-full ml-6'  // Content Left -> Summary Right of Planet
+                                            ? 'right-full mr-6' // Content Right -> Summary Left of Planet
+                                            : 'left-full ml-6'  // Content Left -> Summary Right of Planet
                                             } hidden md:block pointer-events-none whitespace-nowrap`}
                                         initial={{ opacity: 0, x: index % 2 === 0 ? 20 : -20 }}
                                         whileInView={{ opacity: 1, x: 0 }}
